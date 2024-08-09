@@ -10,7 +10,7 @@ use crate::workload::executor::default_executor;
 
 // One thing to note is that in the end, container is just another process in Linux
 // it has specific/different control group, namespace, using which program executing in it
-// can be given impression that is is running on a complete system, but on the system which
+// can be given impression that is running on a complete system, but on the system which
 // it is running, it is just another process, and has attributes such as pid, file descriptors, etc.
 // associated with it like any other process.
 pub fn create(args: Create, root_path: PathBuf, systemd_cgroup: bool) -> Result<()> {
